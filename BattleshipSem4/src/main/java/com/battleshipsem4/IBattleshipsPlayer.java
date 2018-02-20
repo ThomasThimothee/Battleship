@@ -20,6 +20,7 @@ public interface IBattleshipsPlayer {
 
     public IPosition takeTurn(); //returns shot
     public void receiveFeedback(int feedback); // get feedback on previous shot 0 miss 1 hit 2 sunk
+    public void incomingShot(IPosition pos);
     public void endGame(int result);
     
 }
