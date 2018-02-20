@@ -29,6 +29,7 @@ public class BattleshipsGameCtrlImpl implements IBattleshipsGameCtrl {
 
         while (true) {
             IPosition pos = p1.takeTurn();
+            p2.incomingShot(pos);
             int result = b2.feedbackShot(pos);
             p1.receiveFeedback(result);
             gameOver = b2.areAllShipsSunk();
@@ -39,6 +40,7 @@ public class BattleshipsGameCtrlImpl implements IBattleshipsGameCtrl {
             }
 
             pos = p2.takeTurn();
+            p1.incomingShot(pos);
             result = b1.feedbackShot(pos);
             p2.receiveFeedback(result);
             gameOver = b1.areAllShipsSunk();
