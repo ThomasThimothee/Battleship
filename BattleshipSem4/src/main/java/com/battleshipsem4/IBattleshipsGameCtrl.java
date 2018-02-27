@@ -11,6 +11,8 @@ package com.battleshipsem4;
  */
 public interface IBattleshipsGameCtrl {
     
-    public int playGame(IBattleshipsPlayer p1, IBattleshipsPlayer p2, IShip[] ships);
+    public int playSingleGame(IBattleshipsPlayer p1, IBattleshipsPlayer p2, IShip[] ships);
+        
+    public IBattleshipsPlayer[] playTournament(IBattleshipsPlayer[] players);
 
 }

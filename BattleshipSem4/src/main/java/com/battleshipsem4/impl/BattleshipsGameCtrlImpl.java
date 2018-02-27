@@ -18,7 +18,7 @@ import com.battleshipsem4.IShip;
 public class BattleshipsGameCtrlImpl implements IBattleshipsGameCtrl {
 
     @Override
-    public int playGame(IBattleshipsPlayer p1, IBattleshipsPlayer p2, IShip[] ships) {
+    public int playSingleGame(IBattleshipsPlayer p1, IBattleshipsPlayer p2, IShip[] ships) {
         p1.startNewGame(1);
         p2.startNewGame(2);
         boolean gameOver;
@@ -54,6 +54,11 @@ public class BattleshipsGameCtrlImpl implements IBattleshipsGameCtrl {
         p2.endGame(winner);
         return winner;
 
+    }
+
+    @Override
+    public IBattleshipsPlayer[] playTournament(IBattleshipsPlayer[] players) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

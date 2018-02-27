@@ -13,5 +13,6 @@ public interface IShip {
     
     public int getLen(); // Ship len = len of the positions[]
     public IPosition[] getPositions();
+    public void sePositions(IPosition[] positions);
     
 }
